@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5">
+  <h2 class="text-center fw-bold mb-5">Let's Connect</h2>
+
+  <!-- Contact Cards -->
+  <div class="row justify-content-center g-4 mb-5">
+    <!-- Location -->
+    <div class="col-md-4" data-aos="fade-up">
+      <div class="card h-100 text-center shadow-sm border-0 rounded-4 p-3 contact-card">
+        <img src="{{ url_for('static', filename='images/icons/location.png') }}" width="40" class="mx-auto mb-3" alt="Location">
+        <h5 class="fw-bold mb-2">Location</h5>
+        <p class="mb-0 text-muted">Kerala, India</p>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card h-100 text-center shadow-sm border-0 rounded-4 p-3 contact-card">
+        <img src="{{ url_for('static', filename='images/icons/email.png') }}" width="40" class="mx-auto mb-3" alt="Email">
+        <h5 class="fw-bold mb-2">Email</h5>
+        <p class="mb-0 text-muted">swathishabu.connect@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card h-100 text-center shadow-sm border-0 rounded-4 p-3 contact-card">
+        <img src="{{ url_for('static', filename='images/icons/linkedin.png') }}" width="40" class="mx-auto mb-3" alt="LinkedIn">
+        <h5 class="fw-bold mb-2">LinkedIn</h5>
+        <p class="mb-0 text-muted">
+          <a href="https://linkedin.com/in/swathishabu" target="_blank" class="text-decoration-none text-primary">linkedin.com/in/swathishabu</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="row justify-content-center">
+    <div class="col-md-8" data-aos="fade-up" data-aos-delay="300">
+      <div class="card p-4 shadow-sm border-0 rounded-4">
+        <h4 class="fw-bold mb-4">Send Me a Message</h4>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary px-4">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

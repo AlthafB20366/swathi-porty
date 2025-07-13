@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero bg-light rounded shadow-sm p-5 mb-5" data-aos="fade-up">
+  <div class="row align-items-center">
+    <div class="col-md-5 text-center mb-4 mb-md-0">
+      <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Swathi Shabu" class="img-fluid rounded-circle shadow" style="max-width: 250px;">
+    </div>
+    <div class="col-md-7 text-center text-md-start">
+      <h1 class="display-5 fw-bold">👋 Hi, I'm Swathi</h1>
+      <h4 class="text-secondary">Education Manager | Junior Project Manager | CRM Specialist</h4>
+      <p class="lead mt-3">Passionate about tech-enabled education, process optimization, and impactful project coordination.</p>
+      <a href="/projects" class="btn btn-primary me-2">View My Projects</a>
+      <a href="{{ url_for('static', filename='resume/Swathi_Shabu_Resume.pdf') }}" class="btn btn-outline-secondary">Download Resume</a>
+    </div>
+  </div>
+</section>
+
+<!-- Tools & Technologies Section -->
+<section class="mb-5">
+    <h2 class="text-center mb-4" data-aos="fade-up">🛠️ Tools & Technologies I Work With</h2>
+    
+    <!-- Cards Row -->
+    <div class="row g-4">
+      <!-- CRM Tools -->
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-person-badge-fill me-2 text-primary"></i>CRM Tools</h5>
+            <p class="card-text">Telzio, EM Dashboard, Keka, Zimbra</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project Management Tools -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-kanban-fill me-2 text-warning"></i>Project Management</h5>
+            <p class="card-text">Trello, Asana, Jira (Basic)</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Productivity Suites -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-file-earmark-text-fill me-2 text-success"></i>Office & Productivity</h5>
+            <p class="card-text">Microsoft Office, Google Workspace</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Communication Tools -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-chat-dots-fill me-2 text-info"></i>Communication</h5>
+            <p class="card-text">Gmail, Zimbra Mail, Zoom, Slack</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Data Reporting -->
+      <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-bar-chart-fill me-2 text-danger"></i>Data Reporting & CX</h5>
+            <p class="card-text">MS Excel, Google Sheets, Power BI (learning), Client Reporting Systems, HubSpot</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Logo Strip Below Cards -->
+    <div class="mt-5 text-center" data-aos="fade-up" data-aos-delay="500">
+      <h5 class="mb-4">Tools I’ve Worked With</h5>
+      <div class="row justify-content-center align-items-center g-3">
+        <div class="col-4 col-md-2">
+          <img src="{{ url_for('static', filename='images/microsoft.png') }}" alt="Microsoft" class="img-fluid" style="max-height: 40px;">
+        </div>
+        <div class="col-4 col-md-2">
+          <img src="{{ url_for('static', filename='images/zimbra.png') }}" alt="Google" class="img-fluid" style="max-height: 40px;">
+        </div>
+        <div class="col-4 col-md-2">
+          <img src="{{ url_for('static', filename='images/slack.png') }}" alt="Slack" class="img-fluid" style="max-height: 40px;">
+        </div>
+        <div class="col-4 col-md-2">
+          <img src="{{ url_for('static', filename='images/hubspot.png') }}" alt="HubSpot" class="img-fluid" style="max-height: 40px;">
+        </div>
+        <div class="col-4 col-md-2">
+          <img src="{{ url_for('static', filename='images/jira.png') }}" alt="Jira" class="img-fluid" style="max-height: 40px;">
+        </div>
+        <div class="col-4 col-md-2">
+          <img src="{{ url_for('static', filename='images/powerbi.png') }}" alt="Power BI" class="img-fluid" style="max-height: 40px;">
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  
+  
+
+<!-- Testimonials Section -->
+<section class="mb-5">
+  <h2 class="text-center mb-4" data-aos="fade-up">💬 What Others Say</h2>
+  <div class="row">
+    {% for i in range(6) %}
+    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="{{ i|int * 100 }}">
+      <div class="card h-100 text-white shadow-sm" style="background-color: #6c63ff; min-height: 250px;">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <p class="card-text">
+            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed justo nec arcu elementum faucibus. Integer a nisi eget sapien tincidunt feugiat.”
+          </p>
+          <h6 class="card-subtitle text-white text-end mt-3">– Jane Doe, Manager</h6>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

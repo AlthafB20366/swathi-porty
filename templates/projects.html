@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+  .card {
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .badge {
+    margin-right: 6px;
+    margin-bottom: 4px;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  .card-body {
+    background-color: #f9f9fb;
+    border-radius: 12px;
+  }
+
+  h2, h4 {
+    color: #3d3d3d;
+  }
+</style>
+
+<div class="container py-5">
+  <h2 class="mb-4 text-center fw-bold">Projects</h2>
+
+  <!-- Technical Projects -->
+  <h4 class="mb-3 mt-5">🔧 Technical Projects</h4>
+  <div class="row">
+    <!-- Project 1 -->
+    <div class="col-md-6 mb-4" data-aos="fade-up">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">AI-Based Automated Paper Evaluation System</h5>
+          <p class="card-text">
+            Developed an AI-powered system to evaluate subjective handwritten answers with high precision.
+            Integrated image preprocessing, NLP models, and OCR techniques to assess responses automatically.
+            Reduced administrative workload by 50% and improved grading consistency by 95%.
+            This project enhances educational assessment through automation and scalable infrastructure on AWS.
+          </p>
+          <div class="mb-2">
+            <span class="badge bg-secondary">Python</span>
+            <span class="badge bg-warning text-dark">Google Colab</span>
+            <span class="badge bg-primary">AWS</span>
+            <span class="badge bg-info text-dark">HTML</span>
+            <span class="badge bg-secondary">OpenCV</span>
+            <span class="badge bg-secondary">NLP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">IoT-Based Quadruped Robot</h5>
+          <p class="card-text">
+            Built a four-legged Spider Robot using ESP8266 and Arduino for remote wireless movement.
+            Integrated real-time data transmission using Wi-Fi communication and ensured smooth locomotion through PWM control logic.
+            The project served as a proof-of-concept for low-cost robotics in automation and surveillance.
+          </p>
+          <div class="mb-2">
+            <span class="badge bg-secondary">Arduino</span>
+            <span class="badge bg-success">NodeMCU</span>
+            <span class="badge bg-info text-dark">C++</span>
+            <span class="badge bg-secondary">Python</span>
+            <span class="badge bg-dark">ESP8266</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Professional Projects -->
+  <h4 class="mb-3 mt-5">💼 Professional Projects</h4>
+  <div class="row">
+    <!-- Project 3 -->
+    <div class="col-md-6 mb-4" data-aos="fade-up">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Operational Data Analytics – Techfunic</h5>
+          <p class="card-text">
+            Conducted data-driven reporting and analytics during a remote internship.
+            Independently resolved 90%+ customer support tickets and presented insights that supported business decision-making and team productivity.
+          </p>
+          <div class="mb-2">
+            <span class="badge bg-warning text-dark">Excel</span>
+            <span class="badge bg-info text-dark">Google Sheets</span>
+            <span class="badge bg-secondary">Support Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Hardware Project Coordination – Protoheim</h5>
+          <p class="card-text">
+            Led the coordination of concurrent hardware projects, maintaining timelines and budgets.
+            Improved internal workflows by conducting process audits and facilitated smooth vendor communication and resource tracking using Jira and Trello.
+          </p>
+          <div class="mb-2">
+            <span class="badge bg-primary">Project Management</span>
+            <span class="badge bg-secondary">Trello</span>
+            <span class="badge bg-secondary">Asana</span>
+            <span class="badge bg-secondary">Jira (Basic)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
